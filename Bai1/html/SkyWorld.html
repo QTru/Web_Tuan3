@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sky World</title>
+
+    <style>
+        body {
+            margin: auto;
+            background-image: linear-gradient(#70ccec, #60a4ec);
+            height: 100vh;
+        }
+
+        .container {
+            margin: auto;
+            width: 60%;
+            height: auto;
+            font-family: 'Times New Roman', Times, serif;
+            color: white;
+        }
+
+        .container * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .header {
+            overflow: hidden;
+            border-bottom: 5px dotted white;
+            padding: 0 20px;
+        }
+
+        .header h1 {
+            float: right;
+            text-shadow: 0 0 5px #0404f6, 0 0 15px #0404f6;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .nav {
+            float: left;
+        }
+
+        .nav ul {
+            list-style-type: none;
+        }
+
+        .nav ul li {
+            display: inline-block;
+            padding: 5px 50px 10px 0;
+        }
+
+        .nav ul li a {
+            text-decoration: none;
+            color: white;
+            display: inline-block;
+            font-size: x-large;
+            font-weight: bold;
+        }
+
+        .body {
+            display: flex;
+            margin-top: 40px;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            border-bottom: 5px dotted white;
+            padding-bottom: 40px;
+        }
+
+        .leftPanel {
+            width: 50%;
+            padding-right: 20px;
+        }
+
+        .leftPanel h1 {
+            margin-bottom: 20px;
+        }
+
+        .leftPanel p {
+            width: 103.5%;
+            font-size: large;
+            text-align: justify;
+        }
+
+        .leftPanel form {
+            margin-top: 5px;
+        }
+
+        .form {
+            padding-left: 40px;
+            display: grid;
+            grid-template-columns: 45% 59%;
+            grid-template-rows: auto auto auto auto auto 100px auto;
+            align-items: center;
+            font-size: large;
+            row-gap: 4px;
+        }
+
+        .form *:not(label) {
+            border: 1px solid #0404f6;
+            border-radius: 6px;
+        }
+
+        .form * {
+            font-size: large;
+        }
+
+        .form textarea {
+            height: 100%;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .form select {
+            width: 18%;
+        }
+
+        .form input[type="submit"],
+        .form input[type="reset"] {
+            border: 1px dashed #0404f6;
+            padding: 2px 4px;
+        }
+
+        .rightPanel {
+            width: 50%;
+            padding-left: 40px;
+            padding-right: 60px;
+        }
+
+        .rightPanel img {
+            width: 100%;
+            object-fit: contain;
+        }
+
+        .rightPanel h1 {
+            margin-top: 20px;
+            text-shadow: 3px 3px #0404f6;
+            margin-left: 40px;
+        }
+
+        .rightPanel p {
+            font-size: x-large;
+            margin-left: 55px;
+            font-weight: bold;
+        }
+
+        .rightPanel * {
+            color: #0404f6;
+        }
+
+        .footer {
+            margin-top: 30px;
+        }
+
+        .footer address {
+            text-align: center;
+            padding: 2px;
+            font-style: normal;
+        }
+
+        .footer address:first-child {
+            font-weight: bold;
+        }
+
+        .footer span {
+            font-weight: bold;
+            font-style: italic;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Sky World</h1>
+            <div class="nav">
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">Products</a></li>
+                    <li><a href="">Services</a></li>
+                    <li><a href="">About</a></li>
+                    <li><a href="">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="body">
+            <div class="leftPanel">
+                <h1>Registration information</h1>
+                <p>
+                    Start your travel planning now with our on-line tour regstration
+                    form. Just tell us a little about yourself and your group and one of our travel
+                    experts will contact you to create the perfect custom built for your group's needs.
+                </p>
+
+                <form action="">
+                    <div class="form">
+                        <label for="Title">Title</label>
+                        <select name="Title" id="Title">
+                            <option value="">Mr.</option>
+                            <option value="">Mrs.</option>
+                            <option value="">Ms.</option>
+                        </select>
+                        <label for="FullName">Full Name *</label>
+                        <input type="text" placeholder="First Name">
+                        <label for="MailingAddress">Mailing Address</label>
+                        <input type="text" placeholder="Mailing Address">
+                        <label for="City">City</label>
+                        <input type="text" placeholder="City">
+                        <label for="Country">Country</label>
+                        <input type="text" placeholder="Country">
+                        <label for="questions">Specific questions or requests about your tour</label>
+                        <textarea name="questions" id="questions"
+                            placeholder="Specific questions or requests about your tour"
+                            style="resize: none;"></textarea>
+                        <div style="border: none;"></div>
+                        <div style="border: none;">
+                            <input type="submit" value="Submit">
+                            <input type="reset" value="Reset">
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="rightPanel">
+                <img src="../img/sky.png" alt="">
+
+                <h1>You've arrived.</h1>
+                <p>Journeys as great as the destination</p>
+            </div>
+        </div>
+
+        <div class="footer">
+            <address>&copy; 2016 Sky World Tours. All rights reserved.</address>
+            <address>Contact information: <span>Student Name</span> | <span>Student ID</span> | Testing Date: <span>16
+                    Sept 2016</span></address>
+        </div>
+    </div>
+</body>
+
+</html>
